@@ -1,7 +1,13 @@
-import img50 from '../assets/imgs/50_front.jpg'
-import img20 from '../assets/imgs/20_front.jpg'
-import img05 from '../assets/imgs/5_front.jpg'
-import img02 from '../assets/imgs/2_front.jpg'
+import front50 from '../assets/imgs/50_front.jpg'
+import back50 from '../assets/imgs/50_back.jpg'
+import front20 from '../assets/imgs/20_front.jpg'
+import back20 from '../assets/imgs/20_back.jpg'
+import front5 from '../assets/imgs/5_front.jpg'
+import back5 from '../assets/imgs/5_back.jpg'
+import front2 from '../assets/imgs/2_front.jpg'
+import back2 from '../assets/imgs/2_back.jpg'
+
+import { Money } from './Money'
 
 
 export function AvailableMoney() {
@@ -26,10 +32,10 @@ export function AvailableMoney() {
     return (
         <div>
             <div className="grid grid-cols-2 grid-rows-2 gap-1 p-1 m-2 absolute bottom-0">
-                {(tem50 ? <img nota-50 src={img50} className="w-20 h-10" /> : "")}
-                {(tem20 ? <img nota-20 src={img20} className="w-20 h-10" /> : "")}
-                {(tem5 ?  <img nota-5 src={img05} className="w-20 h-10" /> : "")}
-                {(tem2 ? <img nota-2 src={img02} className="w-20 h-10" /> : "")}
+                <Money imgFront={front50} imgBack={back50} have={tem50} />
+                <Money imgFront={front20} imgBack={back20} have={tem20} />
+                <Money imgFront={front5} imgBack={back5} have={tem5} />
+                <Money imgFront={front2} imgBack={back2} have={tem2} />
             </div>
         </div>
     )
