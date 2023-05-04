@@ -11,7 +11,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export function Button(props: ButtonProps) {
     const { variant } = props
 
-    const style = `btn bg-gray-400 p-2 text-xs drop-shadow-lg rounded-lg
+    const style = `btn bg-gray-400 p-2 text-xs drop-shadow-lg shadow-dark rounded
                    hover:bg-gray-600 hover:text-slate-200`
 
     switch(variant) {
@@ -103,8 +103,8 @@ export function RightButton(props: ButtonProps) {
 
     return (
         <button {...props} className={`${defaultStyle} flex items-center justify-end text-right h-16 text-blue-700 bg-slate-200`}>
-            <span>{children}</span>
-            {icon && cloneElement(icon, {className: 'fill-white w-7 h-7'})}
+            <span className="font-bold uppercase text-xs">{children}</span>
+            <i>{icon && cloneElement(icon, {className: 'w-7 h-7'})}</i>
         </button>
     )
 }
@@ -115,8 +115,8 @@ export function LeftButton(props: ButtonProps) {
 
     return (
         <button {...props} className={`${defaultStyle} flex items-center justify-start text-left h-16 text-blue-700 bg-slate-200`}>
-            <span>{children}</span>
-            {icon && cloneElement(icon, {className: 'fill-blue-700 w-7 h-7'})}
+            {icon && cloneElement(icon, {className: 'w-7 h-7'})}
+            <span className="font-bold uppercase text-xs">{children}</span>
         </button>
     )
 }

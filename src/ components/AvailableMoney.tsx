@@ -9,7 +9,6 @@ import back2 from '../assets/imgs/2_back.jpg'
 
 import { Money } from './Money'
 
-
 export function AvailableMoney() {
     
     let tem50 = true
@@ -17,7 +16,7 @@ export function AvailableMoney() {
     let tem5 = true
     let tem2 = true
 
-    if(!tem50 && !tem20 !&& !tem5 && !tem2) {
+    if(!tem50 && !tem20 && !tem5 && !tem2) {
         return (
             <div>
                 <div className="grid grid-cols-1 grid-rows-3 align-center gap-1 p-2 rounded-md m-2 absolute bottom-0 bg-blue-900/50">
@@ -31,7 +30,7 @@ export function AvailableMoney() {
     
     return (
         <div>
-            <div className="grid grid-cols-2 grid-rows-2 gap-1 p-1 m-2 absolute bottom-0">
+            <div className="grid grid-cols-2 grid-rows-2 gap-1 p-1 m-2 absolute bottom-0 border-3">
                 <Money imgFront={front50} imgBack={back50} have={tem50} />
                 <Money imgFront={front20} imgBack={back20} have={tem20} />
                 <Money imgFront={front5} imgBack={back5} have={tem5} />

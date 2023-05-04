@@ -27,7 +27,6 @@ export function Standyby() {
     const navigate = useNavigate()
 
     const botoes = document.querySelectorAll('button')
-
     console.log("Nº de botões:", botoes.length)
     
     botoes.forEach((botao) => {
